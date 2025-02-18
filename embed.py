@@ -5,12 +5,12 @@ from langchain.text_splitter import CharacterTextSplitter
 from config import OPENAI_API_KEY, EMBEDDING_MODEL
 
 def load_knowledge(file_path):
-    """Load text from a file."""
+    """Load text from knowledge file"""
     with open(file_path, "r", encoding="utf-8") as f:
         return f.read()
 
 def create_faiss_index(text):
-    """Convert text into embeddings and store in FAISS."""
+    """Convert text into embeddings and store in FAISS"""
     embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY, model=EMBEDDING_MODEL)
     splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
     

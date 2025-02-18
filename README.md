@@ -38,7 +38,7 @@ dev-color-project/
 
 - **check_models**: This will verify the OpenAI models available to you based on the supplied `api_key` in the config.py
 - **config.py**: This is the configuration file for setting up your `Open AI` api keys. If you don't have one please use the one already committed there.
-- **embed.py**: This creates the FAISS embeddings from the knowledge file supplied i.e. `data/devcolorfaq.txt`. In turn this creates a `faiss_index.bin` file within the same project level for all the embeddings needed to process the queries.
+- **embed.py**: This creates the FAISS embeddings from the knowledge file supplied i.e. `data/devcolorfaq.txt`. In turn this creates a `faiss_index.bin` file within the same project level for all the embeddings needed to process the queries and generates a `chunks.txt` file in the `/data` directory.
 - **main.py**: This file handles user queries and retrieves the best-matching document response.
 
 ### Usage
