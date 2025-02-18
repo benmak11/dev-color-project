@@ -19,6 +19,8 @@ The project uses FAISS for similarity search, **LangChain** for query processing
 pip install faiss-cpu langchain openai tiktoken
 ```
 
+3. Have a valid [OpenAI](https://platform.openai.com/) development account that will allow you to generate an `api_key` that is required to run the LLM. Please follow these [instructions](https://medium.com/@lorenzozar/how-to-get-your-own-openai-api-key-f4d44e60c327) for setting up the account if you don't have one.
+
 ### Project Structure
 
 ```
@@ -35,7 +37,7 @@ dev-color-project/
 #### Code Walkthrough
 
 - **check_models**: This will verify the OpenAI models available to you based on the supplied `api_key` in the config.py
-- **config.py**: This is the configuration file for setting up your Open_AI api keys. If you don't have one please use the one already committed there.
+- **config.py**: This is the configuration file for setting up your `Open AI` api keys. If you don't have one please use the one already committed there.
 - **embed.py**: This creates the FAISS embeddings from the knowledge file supplied i.e. `data/devcolorfaq.txt`. In turn this creates a `faiss_index.bin` file within the same project level for all the embeddings needed to process the queries.
 - **main.py**: This file handles user queries and retrieves the best-matching document response.
 
@@ -59,3 +61,5 @@ python main.py
 
   - Type your question, and the system retrieves relevant knowledge
   - OpenAI's GPT model generates a response based on the retrieved text
+
+`Voila`! The command line should respond to any relevant [/dev/color](https://devcolor.org/) question until the user decides to quit.
