@@ -6,7 +6,7 @@ This is a very simple Command-Line Retrieval-Augmented Generation (RAG for short
 
 ## Technical Aspects
 
-The project uses FAISS for similarity search, **LangChain** for query processing, and **OpenAI's GPT model** for generating responses. The language used is Python so hopefully its easy to read and follow along!
+The project uses **FAISS** for similarity search, **LangChain** for query processing, and **OpenAI's GPT model** for generating responses. The language used is Python so hopefully its easy to read and follow along!
 
 ## Setup
 
