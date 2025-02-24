@@ -1,3 +1,4 @@
 /__pycache__
+/__pycache__/config.cpython-313.pyc
 /data/chunks.txt
 faiss_index.bin
