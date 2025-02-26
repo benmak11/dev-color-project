@@ -17,7 +17,7 @@ def create_faiss_index(text):
     chunks = splitter.split_text(text)
     vectors = embeddings.embed_documents(chunks)
     
-    dim = len(vectors[0])  
+    dim = len(vectors[0])
     index = faiss.IndexFlatL2(dim)
     index.add(np.array(vectors).astype('float32'))
     
