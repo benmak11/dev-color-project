@@ -78,13 +78,12 @@ class OptimizedRAGSystem:
         
         # Create a more detailed prompt
         prompt = f"""Based on the following context, provide a comprehensive and accurate answer to the user's question. If the context doesn't contain enough information, say so.
+                    Context:
+        {context_text}
 
-Context:
-{context_text}
+        Question: {query}
 
-Question: {query}
-
-Answer:"""
+        Answer:"""
         
         try:
             response = client.chat.completions.create(
